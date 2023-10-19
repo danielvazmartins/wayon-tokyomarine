@@ -1,4 +1,7 @@
 # Processo seletivo Wayon x Tokio Marine
+Projeto que simula um sistema de agendamento de transações financeiras. Uma taxa é calculada conforme a data e valor do agendamento
+
+![Alt text](taxas_agendamento.png)
 
 ## Estrutura do projeto
 ### **transferencias-api** - Backend em SpringBoot
