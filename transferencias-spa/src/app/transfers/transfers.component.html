@@ -1,6 +1,12 @@
-<h1>Aplicação de transferencias</h1>
-{{accounts | json}}
-
-<mat-card>
-    <mat-card-content>Simple card</mat-card-content>
-</mat-card>
+<section class="page">
+    <header>
+        <h1>Aplicação para agendamento de Transferencias</h1>
+    </header>
+    <section class="line">
+        <app-form-transfer class="panel" (updateTransfers)="loadTransfers()"></app-form-transfer>
+    </section>
+    <section class="line">
+        <app-accounts class="panel"></app-accounts>
+        <app-list-transfers class="panel" [transfers]="transfers"></app-list-transfers>
+    </section>
+</section>

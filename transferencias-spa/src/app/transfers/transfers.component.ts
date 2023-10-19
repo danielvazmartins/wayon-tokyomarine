@@ -9,20 +9,17 @@ import { AccountsService } from "../shared/services/accounts.service";
     styleUrls: ["./transfers.component.scss"]
 })
 export class TransfersComponent implements OnInit {
-    public accounts: any = []
-
+    public transfers: any = []
 
     constructor(
-        private transfersService: TransfersService,
-        private accountsService: AccountsService
+        private transfersService: TransfersService
     ) {}
 
-    ngOnInit(): void {
-        this.transfersService.getAll()
-        this.loadAccounts();
+    ngOnInit() {
+        this.loadTransfers()
     }
 
-    loadAccounts() {
-        this.accountsService.getAll().subscribe(response => this.accounts = response)
+    loadTransfers() {
+        this.transfersService.getAll().subscribe(response => this.transfers = response)
     }
 }

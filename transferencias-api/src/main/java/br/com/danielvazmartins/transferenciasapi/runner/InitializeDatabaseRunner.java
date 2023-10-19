@@ -22,7 +22,15 @@ public class InitializeDatabaseRunner implements CommandLineRunner{
 
         AccountModel account2 = new AccountModel(2222222222L, 50.0);
         accountRepository.save(account2);
+
+        AccountModel account3 = new AccountModel(3333333333L, 250.0);
+        accountRepository.save(account3);
         
+        AccountModel account4 = new AccountModel(4444444444L, 670.0);
+        accountRepository.save(account4);
+
+        AccountModel account5 = new AccountModel(5555555555L, 290.0);
+        accountRepository.save(account5);
     }
     
 }

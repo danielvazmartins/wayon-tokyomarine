@@ -1,4 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
+
+.panel {
+    display: block;
+    margin: 15px;
+    border: 1px #ed472f solid;
+    border-radius: 5px;
+}
+
+section.line {
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-header {
+    margin: 10px;
+    font-size: 18px;
+    color: #454242;
+    text-decoration: underline;
+}

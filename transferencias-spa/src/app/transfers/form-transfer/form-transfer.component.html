@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>Agendar transferência entre contas</mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="formNewTransfer">
+            <mat-form-field>
+                <mat-label>Data da Transferência</mat-label>
+                <input matInput [matDatepicker]="datepicker" formControlName="dateOfTransfer">
+                <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker>
+                    <mat-datepicker-actions>
+                        <button mat-button matDatepickerCancel>Cancelar</button>
+                        <button mat-raised-button color="primary" matDatepickerApply>OK</button>
+                    </mat-datepicker-actions>
+                </mat-datepicker>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Conta de Origem</mat-label>
+                <input matInput #message1 maxlength="10" placeholder="Ex. 9999999999" formControlName="sourceAccountNumber" mask="0000000000">
+                <mat-hint align="end">{{message1.value.length}} / 10</mat-hint>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Conta de Destino</mat-label>
+                <input matInput #message2 maxlength="10" placeholder="Ex. 9999999999" formControlName="destinationAccountNumber" mask="0000000000">
+                <mat-hint align="end">{{message2.value.length}} / 10</mat-hint>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Valor da transferência</mat-label>
+                <input matInput maxlength="10" placeholder="Ex. R$100,00." formControlName="valueToTransfer" prefix="R$ " mask="separator.2" thousandSeparator="." decimalMarker=",">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-stroked-button color="primary" [disabled]="formNewTransfer.invalid" (click)="registerTransfer()">Agendar</button>
+    </mat-card-actions>
+</mat-card>
+
+

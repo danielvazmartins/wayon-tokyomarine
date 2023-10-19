@@ -2,9 +2,7 @@ package br.com.danielvazmartins.transferenciasapi.model;
 
 import java.util.Date;
 import java.util.UUID;
-
-import org.springframework.data.annotation.CreatedDate;
-
+import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -18,12 +16,13 @@ public class TransferModel {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    @CreatedDate
-    private Date date;
+    @CreationTimestamp
+    private Date createdAt;
     private Date dateOfTransfer;
     @ManyToOne
     private AccountModel sourceAccount;
     @ManyToOne
     private AccountModel destinationAccount;
     private Double valueToTransfer;
+    private Double tax;
 }

@@ -1,8 +1,15 @@
 # Processo seletivo Wayon x Tokio Marine
 
 ## Estrutura do projeto
-* **transferencias-api** - Backend em SpringBoot
-* **transferencias-spa** - Frontend em Angular 
+### **transferencias-api** - Backend em SpringBoot
+> Java 21 \
+> SpringBoot 3.1.4
+
+### **transferencias-spa** - Frontend em Angular
+> Angular CLI: 16.2.4 \
+> Node: 18.18.0 \
+> Package Manager: npm 9.8.1
+> Angular Material: 16.2.9
 
 ## Iniciando o projeto
 ### Backend (SpringBoot)
